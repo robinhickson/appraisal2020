@@ -381,6 +381,9 @@ getListener.addEventListener('click', (e) => {
             clickTarget.parentNode.previousElementSibling.previousElementSibling.style.display = 'none';
         }
 
+    }else if(clickTarget.classList.contains("modal-close")){
+        document.querySelector('.hidden').style.display = 'none'; 
+
     }
 
     if (clickTarget.classList.contains("collapseOld")) {

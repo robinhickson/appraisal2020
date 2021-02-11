@@ -90,10 +90,10 @@
 
                 <article class="socialCo">
                     <div class="socialIconWrapper">
-                        <a onclick="document.querySelector('.hidden').style.display = 'block'" cursor="pointer" ><img class="socialSVG" width="100px" height="100px" src="images/plan.JPG" alt="code example" width="100px" height= "100px"></a>
+                        <a href="#modal" onclick="document.querySelector('.hidden').style.display = 'block'" cursor="pointer" ><img class="socialSVG" width="100px" height="100px" src="images/plan.JPG" alt="code example" width="100px" height= "100px"></a>
                     </div>
                     <div class="getGooglePlusData">
-                        <span class="socialName">Plans</span>
+                        <span class="socialName">The Idea</span>
 
                     </div>
                 </article>
@@ -120,13 +120,20 @@
                 </section>
             </div>
         </section>
+       
+      
     </div>
-    <div class="overlay hidden">
-        <div class="modal">
+    <div id="overlay" class="overlay hidden">
+        <div id="modal" class="modal">
             <button class="modal-close">X</button>
-            <button class="modal-previous">&lt;</button>
-            <div class="modalInner"></div>
-            <button class="modal-next">&gt;</button>
+            
+            <div class="modalInner fullMessageOut">
+                <h2>The Idea</h2><br>
+                <h4>If you agree, I would propose to follow the new objectives described below. The goal being, to combine the operational knowledge that I've begun collating in the <a href = "https://www.makclearning.com" rel="noreferrer noopener" target= "_blank" >MAKC Website</a>, with the technical skills that I've acquired - and hopefully demonstrated here with this Appraisal Dashboard. The vision would be to provide a portal which showcases the best of MUAC, and makes e.g. courses, support or online tools, available to subscribers.<br><br>My recommended approach would be to leverage the technology of the latest Javascript-powered web tools, such as PWA (Progressive Web Apps). This would enable the portal to be secure, yet accessible - on all platforms (mobile or desktop, internal or external). And - I can build it without messing with Engineering.<br><br>
+                    Imagine the Innovation Lab - on the WWW.
+                 </h4>
+            </div>
+            
         </div>
     </div>
 

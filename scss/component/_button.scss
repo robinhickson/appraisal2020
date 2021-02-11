@@ -15,36 +15,41 @@ button,button:focus,button:active {
     border-radius: 5px;
     width:90%;
     background-color: #11f31d;;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     padding: 5px;
     outline: none;
   }
   
   button:hover {
-    margin: 1rem;
-    box-shadow: $secondary-color 2px 2px ;
+    margin: 0.6rem;
+    box-shadow: $secondary-color 2px -2px ;
     color: whitesmoke;
     border: 1px solid $secondary-color;
     border-radius: 5px;
-    width:90%;
    
   }
 
   .overlay {
-    position: absolute;
-    top: 0;
+    position: absolute;  
+    top:25%;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(100, 100, 100, 0.4);
+   
+    margin-bottom: 4rem;
+    background: rgba(100, 100, 100, 0.8);
   }
   
   .modal {
+    margin-top:100px;
     width: 90%;
-    margin: 10% auto auto;
+    min-height: 33%;
+   
+    margin-left: 7%;
+    margin-bottom: 4rem;
     position: relative;
+    top: 50%;
     text-align: center;
-    background: #9594aa;
+    background: $secondary-color-light;
     border-radius: 5px;
     padding: 30px 20px;
     opacity: 0.99;
@@ -64,20 +69,22 @@ button,button:focus,button:active {
   }
   
   .modal-close {
+    width: 2em;
     position: absolute;
     right: 15px;
     top: 5px;
+    background-color: $primary-color-light;
   }
-  
-  .modal-previous {
-    position: absolute;
-    left: 15px;
-    top: 20%;
-  }
-  
-  .modal-next {
+
+  .modal-close:active {
+    width: 2em;
     position: absolute;
     right: 15px;
-    top: 20%;
+    top: 5px;
+    background-color: $primary-color-light;
   }
+
+
+  
+ 
 
