@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appraisal Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" /> -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="header">
+            <ol class="logoArea">
+                <li class="appTitle"><span id="appTitle1">MyAppraisal</span><span id="appTitle2">Dashboard</span></li>
+                <li><img class="avatar" src="images/work_profile2.JPG" alt="work profile image"></li>
+                <li><span class="memberName">Robin Hickson</span></li>
+            </ol>
+        </section>
+
+
+   
+
+        <nav class="navArea">
+            <a href="#"><img class="icon icon-dash" src="icons/icon-dashboard.svg" height="40"
+                    alt="dashboard page icon"></a>
+           
+            <a href="#chartRegion"><img class="icon" src="icons/icon-visits.svg" height="40" alt="dashboard icon"></a>
+            <a href="#socialStats"><img class="icon" src="icons/icon-members.svg" height="40"
+                alt="members page icon"></a>
+            <a href="#membersActivity"><img class="icon" src="icons/icon-settings.svg" height="40"
+                    alt="settings page icon"></a>
+        </nav>
+
+        <section id="chartRegion" class="chartRegion">
+            <div class="tabs">
+                <span class="titleTraffic sectionHead">Motivation</span>
+                <span><a href="#" class="annual tab">2020</a></span>
+                <span><a href="#" class="decade tab">Decade</a></span>
+                <span><a href="#" class="career tab activeTab">Career</a></span>
+            </div>
+
+            <div class="lineWrapper">
+                <div class="lineChart">
+                    <canvas id="motivationChart" height=100></canvas>
+                </div>
+            </div>
+
+            <div class="barDonutWrapper">
+                <div class="barChart">
+                    <span class="titleTraffic sectionHead">Appraisal History</span>
+                    <div class="chartWrapper"><canvas id="barChart" height=150></canvas></div>
+
+                </div>
+                <div class="donutChart">
+                    <span class="titleTraffic sectionHead">Lockdown 2020 Activities</span>
+                    <div class="chartWrapper"><canvas id="donutChart" height=150></canvas></div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="socialStats" class="socialStatsArea">
+            <h2 class="sectionHead">Activity Links</h2>
+            <div class="socialWidgets">
+                <article class="socialCo">
+                    <div class="socialIconWrapper">
+                        <a href = "https://www.makclearning.com" rel="noreferrer noopener" target= "_blank" ><img class="socialSVG" width="100px" height="100px" src="images/makclearning.JPG" alt="Techdegree Portfolio" width="100px" height= "100px"></a>
+                    </div>
+                    <div class="getTwitterData">
+                        <span class="socialName">MAKC Portal</span>
+                    </div>
+                </article>
+
+                <article class="socialCo">
+                    <div class="socialIconWrapper">
+                        <a href = "https://www.writecodesign.com" rel="noreferrer noopener" target= "_blank"><img class="socialSVG" width="100px" height="100px" src="images/techdegree.JPG" alt="MAKC Learning Portal link" width="100px" height= "100px"></a>
+                    </div>
+                    <div class="getFacebookData">
+                        <span class="socialName">Techdegree</span>
+
+                    </div>
+                </article>
+
+                <article class="socialCo">
+                    <div class="socialIconWrapper">
+                        <a onclick="document.querySelector('.hidden').style.display = 'block'" cursor="pointer" ><img class="socialSVG" width="100px" height="100px" src="images/plan.JPG" alt="code example" width="100px" height= "100px"></a>
+                    </div>
+                    <div class="getGooglePlusData">
+                        <span class="socialName">Plans</span>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="membersActivity" class="membersActivity">
+            <div class="activitySettings">
+                <section class="recentActivityArea">
+                    <h2 class="sectionHead">2020 Objectives</h2>
+                    <div class="collapseUncollapse">
+                        <button class="collapseOld">OPEN</button>
+                    </div> 
+                    <div class="oldObjectives"></div>
+                </section>
+            </div>
+            <div class="membersMessages">
+                <section class="newObjectivesArea">
+                    <h2 class="sectionHead">New 2021 Objectives</h2>
+                    <div class="collapseUncollapse">
+                        <button class="collapseNew">OPEN</button>
+                    </div>
+                    <div class="newObjectives"></div>
+                </section>
+            </div>
+        </section>
+    </div>
+    <div class="overlay hidden">
+        <div class="modal">
+            <button class="modal-close">X</button>
+            <button class="modal-previous">&lt;</button>
+            <div class="modalInner"></div>
+            <button class="modal-next">&gt;</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.js"></script>
+    <script src="JS/app.js"></script>
+</body>
+
+</html>
