@@ -1,0 +1,349 @@
+
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+//Nested grids
+
+
+
+
+.container {
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(80px, auto);  
+  row-gap: 1rem;
+  column-gap: 5px;
+  grid-template-areas:
+  "header "
+  "search "   
+  "alert "
+  "nav "    
+  "charts "
+  "social "
+  "members "
+  ; 
+  border-bottom: 2px solid $secondary-color;
+  margin-bottom: 1em;
+}
+
+.chartRegion {  
+  grid-area: charts;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 1rem; 
+}
+
+
+
+//mainContainer flex items/grid areas
+
+.header {
+  grid-area: header;
+  background-color: $primary-color-light;
+  padding-left: 1rem;
+  padding-right: 1rem;   
+}
+
+.searchArea{
+  grid-area: search;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.alertArea{
+  grid-area: alert;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;  
+  background-color: $primary-color;
+  width: 90%;
+  flex-grow:1; 
+  padding:1rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  }
+
+.navArea{
+  grid-area: nav;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  background-color: $primary-color-light;
+  padding: 1rem;
+}
+
+.socialStatsArea{
+  grid-area: social;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around; 
+}
+
+
+.membersActivity{
+  grid-area: members;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 2rem;  
+ }
+
+
+ 
+ //Header/Logo section
+
+
+
+.logoArea{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items:center;
+  height: 100%;
+  }
+
+  .appTitle{
+    flex-grow: 1;     
+    }
+
+    #appTitle1{
+      color: $white;
+      font-weight: $font-bold;
+      font-size: 150%; 
+      }
+    #appTitle2{
+      color: $secondary-color-light;
+      font-weight: $font-light;  
+      font-size: 150%; 
+      }
+
+.notificationsBell{
+  cursor: pointer; 
+
+}
+
+.notificationsBell:hover{
+animation-name: rocker;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+animation-fill-mode: forwards;
+
+}
+
+
+.logoArea li:nth-child(4){ // spacer
+  border-right: solid $primary-color 1px;
+  height: 50%;
+   }
+
+ .memberName{
+   font-weight: $font-bold;
+   font-size: 120%;
+ }
+
+ 
+
+//Alert section
+
+.alertArea *{
+  color: $white;
+  font-size: calc(0.5rem + 1vmax);
+  font-weight: $font-bold;
+}
+
+#alertText{
+  font-weight: $font-light;
+ 
+}
+
+
+//Social Stats section
+
+.socialWidgets{
+  
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:space-around;  
+}
+
+
+
+.socialCo{
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+  
+  background-color: $secondary-color-light; 
+  border: solid $secondary-color 1px;
+  border-radius: 3px;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.getTwitterData, .getFacebookData, .getGooglePlusData{ 
+  display: flex;
+  flex-flow: column nowrap; 
+  padding-right: 1.5em;
+  padding-left: 1.5rem;
+  font-weight: $font-bold;
+}
+
+.socialIconWrapper{
+  align-self: center;
+  min-width: 40px; 
+}
+
+.socialName{
+  font-size: calc(0.25rem + 1.5vmax);
+  color: $primary-color;
+}
+
+.socialData{
+  font-size: calc(0.25em + 3vmax);
+}
+// //Members and Activity section
+
+.membersMessages, .activitySettings{
+display:flex;
+flex-flow: column nowrap;
+flex-grow: 1;
+
+}
+
+// //New Members area
+  .newMembersArea{
+    @include flex-column-nowrap-border-top;
+    border-right: solid 1px rgba(0,0,0,0.2);
+ 
+  }
+
+      .newMember{
+        display:flex;        
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+      }
+
+      .aNewMember{
+        display:flex;
+        width: 95%;
+        flex-flow: row wrap;
+        
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-bottom: solid 1px $secondary-color-light;
+        
+      }
+
+    
+      .date{
+        margin-left:auto;        
+      }
+
+      .emailMember{
+        color: $primary-color-light;
+      }
+
+//       //Recent activity area
+
+.recentActivityArea, .newObjectivesArea{
+  @include flex-column-nowrap-border-top;
+  justify-content: flex-start;
+  align-content: flex-start; 
+  border-right: 1px solid $secondary-color;
+  border-bottom: 1px solid $secondary-color;
+   
+}
+   .oldObjectives{
+      display:flex;        
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      
+    }
+
+    .aNewObjective, .aRecentActivity{
+      display:flex;
+      width: 95%;
+      flex-flow: column nowrap;
+      
+      justify-content: flex-start;
+      align-items:stretch;
+      padding-left: 1rem;
+      padding-right: 1.5rem;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-bottom: solid 2px $secondary-color-light;
+      
+    }
+
+    .recentActivityNameActivity{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+.nameTitle{
+    font-weight: $font-bold;
+}
+
+.truncMessageOut{  
+  font-weight: $font-light;
+ 
+  color: $secondary-color;  
+}
+
+.fullMessageOut{
+  font-weight: $font-bold;
+  color: black;
+margin-bottom: 0.5em;
+margin-top: 0.5em;
+}
+
+
+    .profileLink{
+       margin-left:auto;
+       padding-left: 2em;
+       font-size: 200%;        
+       font-weight: $font-bold;
+    }
+
+.messageMore{
+  
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+}
+
+.detail{
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-start;
+}
+
+.collapseUncollapse{
+  margin-left:auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 100%;        
+  font-weight: $font-bold;
+}
+  

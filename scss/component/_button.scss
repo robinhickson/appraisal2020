@@ -1,0 +1,83 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+.custom-buttons-wrapper{
+margin-left: 4rem;
+}
+
+
+
+button,button:focus,button:active {
+    margin: 0.5rem;
+    color: $white;
+    font-weight: $font-bold;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    width:90%;
+    background-color: #11f31d;;
+    transition: 0.5s ease-in-out;
+    padding: 5px;
+    outline: none;
+  }
+  
+  button:hover {
+    margin: 1rem;
+    box-shadow: $secondary-color 2px 2px ;
+    color: whitesmoke;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    width:90%;
+   
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.4);
+  }
+  
+  .modal {
+    width: 90%;
+    margin: 10% auto auto;
+    position: relative;
+    text-align: center;
+    background: #9594aa;
+    border-radius: 5px;
+    padding: 30px 20px;
+    opacity: 0.99;
+    z-index: 999;
+  }
+  
+  .modalInner {
+    margin: 0.5rem 1rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .modalIcon:hover {
+    stroke: $white;
+  }
+  
+  .modal-close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+  }
+  
+  .modal-previous {
+    position: absolute;
+    left: 15px;
+    top: 20%;
+  }
+  
+  .modal-next {
+    position: absolute;
+    right: 15px;
+    top: 20%;
+  }
+

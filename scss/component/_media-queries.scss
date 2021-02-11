@@ -1,0 +1,59 @@
+/* ============================================= */
+
+
+/*              Media Queries                    */
+
+
+/* ============================================= */
+
+@media (min-width: $breakpointTablet) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 23fr;
+        grid-template-rows: minmax(80px, auto);  
+        row-gap: 0;
+        column-gap: 5px;
+        grid-template-areas:
+        "header header "
+        "nav search "   
+        "nav alert "       
+        "nav charts "
+        "nav social "
+        "nav members "; 
+        margin: 0 auto;
+        border-bottom: 2px solid $secondary-color;
+        margin-bottom: 1em;
+           }
+    
+           .navArea{
+            grid-area: nav;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            background-color: $primary-color-light;
+            padding: 1rem;
+           
+          }
+
+          .navArea>a {
+              margin-bottom: 2rem;
+          }
+          
+    }
+
+
+@media (min-width: $breakpointDesktop) {
+    .container {
+        max-width: 1800px;
+        border: solid 1px $secondary-color-light;
+        margin: 0 auto;
+        border-bottom: 2px solid $secondary-color;
+        margin-bottom: 1em;
+       
+    }
+    .socialSVG{ 
+        width: 80%;
+        max-width: 110px;        
+      }
+   
+}
